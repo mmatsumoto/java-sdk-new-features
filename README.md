@@ -4,9 +4,10 @@ This is just a playground project to study the new JDK's features.
 
 * Java 9: [examples](java9/src/main/java/org/example/module/one/java9/ExamplesJava9.java), Jigsaw ([java9-module-one](java9-module-one/src/main/java/), [java9-module-two](java9-module-two/src/main/java/))  
 
-## Pre-requisites:
 
-### jenv is your friend (https://www.jenv.be/)
+### tips:
+
+#### jenv is your friend (https://www.jenv.be/)
 
 ```
 $ brew install jenv
