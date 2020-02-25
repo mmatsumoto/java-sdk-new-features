@@ -6,7 +6,7 @@ This is just a playground project to study the new JDK's features.
 
 ## Pre-requisites:
 
-### jenv is your friend
+### jenv is your friend (https://www.jenv.be/)
 
 ```
 $ brew install jenv
@@ -16,6 +16,15 @@ $ brew install jenv
 
 eval "$(jenv init -)"
 jenv init -
+
+#### enable jenv plugins:
+
+```
+$ jenv enable-plugin export
+$ jenv enable-plugin maven
+// and/or
+$ jenv enable-plugin graddle
+```
 
 #### Install a new jdk with brew
 
@@ -27,7 +36,7 @@ $ brew install openjdk@11
 
 ```
 $ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/
-// or
+// another one
 $ jenv add /Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/
 ```
 
@@ -49,6 +58,9 @@ $ jenv versions
 ```
 $ alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
 $ jenv_set_java_home
+
+// or if you have enabled the export plugin:
+$ exec $SHELL -l
 ```
 
 
