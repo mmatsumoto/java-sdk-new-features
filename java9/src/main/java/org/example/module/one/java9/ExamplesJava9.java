@@ -17,16 +17,15 @@ import static java.util.Arrays.asList;
 
 
 /**
- * jshell - REPL
- *  no semi-colon
- *  use TABs to autocomplete
+ * 1) jshell - REPL
+ * no semi-colon
+ * use TABs to autocomplete
  */
 
 /**
- * private methods on interfaces
+ * 2) private methods on interfaces
  */
 interface Util {
-
     default void doSomething1() {
         System.out.println(privateMethod1());
     }
@@ -44,33 +43,37 @@ interface Util {
     }
 }
 
+/**
+ * 3) List.of, Set.of, Map.of
+ */
 class OfUtil {
     public static void main(String[] args) {
         List<Integer> integers = List.of(1, 2, 3, 4, 5, 6, 7);
 
-        // immutable, this throw exceptions
-//        integers.add(1);
-//        integers.set(0, 1);
+        // of returns immutable representation, the code bellow throw exceptions
+        // integers.add(1);
+        // integers.set(0, 1);
 
         System.out.println(integers);
 
-        System.out.println(Set.of(1,2,3,4));
-        System.out.println(Map.of("k1","v1","k2","v2"));
-
+        System.out.println(Set.of(1, 2, 3, 4));
+        System.out.println(Map.of("k1", "v1", "k2", "v2"));
     }
 }
 
 /**
- * TryWithResource - AutoCloseable
+ * 4) TryWithResource - AutoCloseable
  */
-class TryWithResource  {
+class TryWithResource {
     static class Resource implements AutoCloseable {
         public Resource() {
             System.out.println("Resource created!");
         }
+
         public void op1() {
             System.out.println("op1 invoked");
         }
+
         @Override
         public void close() {
             System.out.println("Resource cleanup!");
@@ -78,7 +81,7 @@ class TryWithResource  {
     }
 
     public static void main(String[] args) {
-        try(Resource resource = new Resource()) {
+        try (Resource resource = new Resource()) {
             resource.op1();
         }
         // or
@@ -87,7 +90,7 @@ class TryWithResource  {
 }
 
 /**
- * Stream takeWhile, dropWhile
+ * 5) Stream takeWhile, dropWhile
  */
 class StreamUtil {
     public static void main(String[] args) {
@@ -108,7 +111,7 @@ class StreamUtil {
 }
 
 /**
- * IntStream.iterate
+ * 6) IntStream.iterate
  */
 class IntIterate {
     public static void main(String[] args) {
@@ -125,41 +128,40 @@ class IntIterate {
 }
 
 /**
- * Optional changes
+ * 7) Optional changes
  */
 class OptionalUtil {
     public static void ifPresentOrElse() {
-        printOptional(Optional.of(1));
-        printOptional(Optional.empty());
+        printOptional(1);
+        printOptional(null);
     }
 
-    private static void printOptional(Optional<Integer> opt) {
+    private static void printOptional(Integer value) {
+        Optional<Integer> opt = Optional.ofNullable(value);
         System.out.println("Optional: " + opt);
         opt.ifPresentOrElse(
-                        e -> System.out.println("e: " + e),
-                        () -> System.out.println("I don't have value"));
+                e -> System.out.println("e: " + e),
+                () -> System.out.println("I don't have value"));
     }
 
     public static void or() {
         System.out.println(Optional.of(10)
-                .or( () -> Optional.of(1)));
+                .or(() -> Optional.of(1)));
 
         System.out.println(Optional.empty()
-                .or( () -> Optional.of(1)));
+                .or(() -> Optional.of(1)));
     }
 
     public static void optionalStream() {
-        List<Integer> numbers = List.of(1,2,3,4,5,6,7,8,9,10);
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-        numbers.stream().filter(e -> e % 2==0)
+        numbers.stream().filter(e -> e % 2 == 0)
                 .findFirst() // return a optional
                 .stream() // stream of one element
                 .forEach(System.out::println);
-
     }
 
     public static void main(String[] args) {
-
         ifPresentOrElse();
 
         or();
@@ -169,7 +171,7 @@ class OptionalUtil {
 }
 
 /**
- * Collectors
+ * 8) Collectors
  * https://www.baeldung.com/java9-stream-collectors
  */
 class CollectorsUtil {
@@ -201,19 +203,19 @@ class CollectorsUtil {
     }
 
     public static void flatMapping() {
-        List<ColorFruit> colorFruits = asList(
+        List<ColorFruit> colorFruits = List.of(
                 new ColorFruit("red", asList("apple", "strawberry")),
                 new ColorFruit("yellow", asList("banana", "manga"))
         );
 
         // without flatMapping - List of List<String>
-        Map<String,  List<List<String>>> colorFruits1 = colorFruits.stream()
+        Map<String, List<List<String>>> colorFruits1 = colorFruits.stream()
                 .collect(Collectors.groupingBy(ColorFruit::getColor,
                         Collectors.mapping(ColorFruit::getFruits, Collectors.toList())));
         System.out.println(colorFruits1);
         //prints: {red=[[apple, strawberry]], yellow=[[banana, manga]]}
 
-        Map<String,  List<String>> colorFruits2 = colorFruits.stream()
+        Map<String, List<String>> colorFruits2 = colorFruits.stream()
                 .collect(Collectors.groupingBy(ColorFruit::getColor,
                         Collectors.flatMapping(c -> c.getFruits().stream(), Collectors.toList())));
         System.out.println(colorFruits2);
@@ -229,9 +231,9 @@ class CollectorsUtil {
 
 
 /**
- * CompletableFuture
+ * 9) CompletableFuture
  * https://www.baeldung.com/java-9-completablefuture
- *
+ * more:
  * Executor defaultExecutor()
  * CompletableFuture<U> newIncompleteFuture()
  * CompletableFuture<T> copy()
@@ -241,9 +243,7 @@ class CollectorsUtil {
  * CompletableFuture<T> orTimeout(long timeout, TimeUnit unit)
  * CompletableFuture<T> completeOnTimeout(T value, long timeout, TimeUnit unit)
  */
-
 class CompletableFutureUtil {
-
     public static CompletableFuture<String> execute(long sleep) {
         CompletableFuture<String> completableFuture
                 = new CompletableFuture<>();
@@ -276,16 +276,14 @@ class CompletableFutureUtil {
         Thread.sleep(600L);
         System.out.println("done");
     }
-
 }
 
+/**
+ * 10) jigsaw - modules - check java9-module-one and java9-module-two
+ */
 
-
-public class Main {
-
+public class ExamplesJava9 {
     public static void main(String[] args) {
-
         System.out.println("Halo java 9");
     }
-
 }
