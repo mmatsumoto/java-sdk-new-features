@@ -7,7 +7,7 @@ This is just a playground project to study the new JDK's features.
 * Java 11: [examples](java11/README.md)
 * Java 12: [No new language features](http://openjdk.java.net/projects/jdk/12/)  
     * [Microbenchmark Suite](http://openjdk.java.net/jeps/230)
-* Java 13: [preview examples](java13/README.md)  
+* Java 13: [(Preview examples) Switch expressions, text blocks](java13/README.md)  
 
 ## Prerequisites:
 
