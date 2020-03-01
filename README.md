@@ -4,6 +4,10 @@ This is just a playground project to study the new JDK's features.
 
 * Java 9: [examples](java9/README.md)  
 * Java 10: [examples](java10/README.md)  
+* Java 11: [examples](java11/README.md)
+* Java 12: [No new language features](http://openjdk.java.net/projects/jdk/12/)  
+    * [Microbenchmark Suite](http://openjdk.java.net/jeps/230)
+* Java 13: [preview examples](java13/README.md)  
 
 ## Prerequisites:
 
