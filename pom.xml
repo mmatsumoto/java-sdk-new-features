@@ -13,6 +13,7 @@
         <module>java9-module-one</module>
         <module>java9-module-two</module>
         <module>java9</module>
+        <module>java10</module>
     </modules>
 
     <properties>

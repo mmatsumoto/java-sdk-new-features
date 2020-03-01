@@ -1,9 +1,9 @@
-package org.example.module.one.java9;
+package org.example.java9;
 
 /**
  * 4) TryWithResource - AutoCloseable
  */
-class TryWithResource {
+class _07TryWithResource {
     static class Resource implements AutoCloseable {
         public Resource() {
             System.out.println("Resource created!");

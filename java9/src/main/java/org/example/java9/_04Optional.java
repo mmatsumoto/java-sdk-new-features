@@ -1,4 +1,4 @@
-package org.example.module.one.java9;
+package org.example.java9;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,7 +6,7 @@ import java.util.Optional;
 /**
  * 7) Optional changes
  */
-class OptionalHelpers {
+class _04Optional {
     public static void ifPresentOrElse() {
         printOptional(1);
         printOptional(null);

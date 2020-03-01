@@ -1,4 +1,4 @@
-package org.example.module.one.java9;
+package org.example.java9;
 
 import java.util.List;
 import java.util.Map;
@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * 3) List.of, Set.of, Map.of
  */
-class OfHelpers {
+class _01Of {
     public static void main(String[] args) {
         List<Integer> integers = List.of(1, 2, 3, 4, 5, 6, 7);
 

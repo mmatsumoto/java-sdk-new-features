@@ -1,11 +1,11 @@
-package org.example.module.one.java9;
+package org.example.java9;
 
 import java.util.List;
 
 /**
  * 5) Stream takeWhile, dropWhile
  */
-class StreamHelpers {
+class _02Stream {
     public static void main(String[] args) {
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 

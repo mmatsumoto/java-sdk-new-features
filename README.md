@@ -2,7 +2,8 @@
 
 This is just a playground project to study the new JDK's features.
 
-* Java 9: [examples](java9/src/main/java/org/example/module/one/java9/), Jigsaw ([java9-module-one](java9-module-one/src/main/java/), [java9-module-two](java9-module-two/src/main/java/))  
+* Java 9: [examples](java9/README.md)  
+* Java 10: [examples](java10/README.md)  
 
 ## Prerequisites:
 

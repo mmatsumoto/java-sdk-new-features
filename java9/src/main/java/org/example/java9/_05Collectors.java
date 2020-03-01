@@ -1,4 +1,4 @@
-package org.example.module.one.java9;
+package org.example.java9;
 
 import lombok.Value;
 
@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * 8) Collectors
  * https://www.baeldung.com/java9-stream-collectors
  */
-class CollectorsHelpers {
+class _05Collectors {
     public static void filtering() {
         List<Integer> numbers = List.of(1, 1, 2, 2, 3, 3, 3, 5, 5, 6);
 

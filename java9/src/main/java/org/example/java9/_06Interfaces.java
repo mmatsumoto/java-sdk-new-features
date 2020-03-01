@@ -1,9 +1,9 @@
-package org.example.module.one.java9;
+package org.example.java9;
 
 /**
  * 2) private methods on interfaces
  */
-interface PrivateMethodOnInterfaces {
+interface _06Interfaces {
     default void doSomething1() {
         System.out.println(privateMethod1());
     }

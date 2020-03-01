@@ -1,11 +1,11 @@
-package org.example.module.one.java9;
+package org.example.java9;
 
 import java.util.stream.IntStream;
 
 /**
  * 6) IntStream.iterate
  */
-class IntIterate {
+class _03IntIterate {
     public static void main(String[] args) {
         System.out.println("iterate (seed, predicate, operator)");
         IntStream.iterate(0, i -> i < 5, i -> i + 1)

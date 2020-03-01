@@ -1,4 +1,4 @@
-package org.example.module.one.java9;
+package org.example.java9;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  * CompletableFuture<T> orTimeout(long timeout, TimeUnit unit)
  * CompletableFuture<T> completeOnTimeout(T value, long timeout, TimeUnit unit)
  */
-class CompletableFutureHelpers {
+class _08CompletableFuture {
     public static CompletableFuture<String> execute(long sleep) {
         CompletableFuture<String> completableFuture
                 = new CompletableFuture<>();
