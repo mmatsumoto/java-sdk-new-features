@@ -14,7 +14,7 @@ This is just a playground project to study the new JDK's features.
 ### Install JDK 13
 
 For Mac:
-```
+```bash
 $ brew tap AdoptOpenJDK/openjdk
 // if you want to list the available versions:
 $ brew search adoptopenjdk
@@ -24,20 +24,20 @@ $ brew cask install adoptopenjdk13
 
 ### Install jenv (https://www.jenv.be/)
 
-```
+```bash
 $ brew install jenv
 ```
 
 #### Load jenv automatically by adding the following to your (bash,zsh) profile :
 
-```
+```bash
 eval "$(jenv init -)"
 jenv init -
 ```
 
 #### enable jenv plugins:
 
-```
+```bash
 $ jenv enable-plugin export
 
 // and/or
@@ -47,7 +47,7 @@ $ jenv enable-plugin graddle
 
 #### add the new jdk to jenv environment
 
-```
+```bash
 $ jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home/
 
 // another one 
@@ -57,7 +57,7 @@ $ jenv add /Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/
 
 #### change your jdk with:
 
-```
+```bash
 $ jenv global 11.0
 
 // or
@@ -70,13 +70,13 @@ $ jenv global 11.0
 $ jenv local 11.0
 ```
 #### check the results:
-```
+```bash
 $ jenv versions
 ```
 
 #### update the PATH
 
-```
+```bash
 $ alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
 $ jenv_set_java_home
 
