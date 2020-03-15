@@ -1,6 +1,6 @@
 module module.one {
     // clients will not have to require again
-    // this is using automatic-module
+    // this is using automatic-module, transitive here is not really necessarily, just to illustrate.
     requires transitive org.apache.commons.lang3;
 
     // you can generate the module-info with:

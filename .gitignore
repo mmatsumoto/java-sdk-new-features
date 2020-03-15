@@ -17,6 +17,8 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
+java9-target/
+
 # IDEA
 # ----
 .idea
