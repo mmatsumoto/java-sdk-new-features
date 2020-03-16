@@ -16,7 +16,7 @@ This is just a playground project to study the new JDK's features.
 For Mac:
 ```bash
 $ brew tap AdoptOpenJDK/openjdk
-// if you want to list the available versions:
+# if you want to list the available versions:
 $ brew search adoptopenjdk
 
 $ brew cask install adoptopenjdk13
@@ -40,7 +40,7 @@ jenv init -
 ```bash
 $ jenv enable-plugin export
 
-// and/or
+# and/or
 $ jenv enable-plugin maven
 $ jenv enable-plugin graddle
 ```
@@ -50,7 +50,7 @@ $ jenv enable-plugin graddle
 ```bash
 $ jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home/
 
-// another one 
+# another one 
 $ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/
 $ jenv add /Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/
 ```
@@ -60,13 +60,13 @@ $ jenv add /Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/
 ```bash
 $ jenv global 11.0
 
-// or
+# or
 $ jenv global 1.8
 $ jenv global 11.0
 
-// you can use 'local' instead of 'global'. this will create a .java-version file
-// and the jvm version you chose will be set up for the current directory only.
-// you can remove it to go back to global
+# you can use 'local' instead of 'global'. this will create a .java-version file
+# and the jvm version you chose will be set up for the current directory only.
+# you can remove it to go back to global
 $ jenv local 11.0
 ```
 #### check the results:
@@ -80,9 +80,9 @@ $ jenv versions
 $ alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
 $ jenv_set_java_home
 
-// or if you have enabled the export plugin just type:
+# or if you have enabled the export plugin just type:
 $ exec $SHELL -l
 
-// or relogin
+# or relogin
 ```
 
