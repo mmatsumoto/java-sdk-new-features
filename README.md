@@ -7,7 +7,8 @@ This is just a playground project to study the new JDK's features.
 * Java 11: [examples](java11/README.md)
 * Java 12: [No new language features](http://openjdk.java.net/projects/jdk/12/)  
     * [Microbenchmark Suite](http://openjdk.java.net/jeps/230)
-* Java 13: [(Preview examples) Switch expressions, text blocks](java13/README.md)  
+* Java 13: [No new language features](https://openjdk.java.net/projects/jdk/13/)  
+* Java 14: WIP [(Preview examples) Records, patterns, text block](java14/README.md)
 
 ## Prerequisites:
 
@@ -15,11 +16,11 @@ This is just a playground project to study the new JDK's features.
 
 For Mac:
 ```bash
-$ brew tap AdoptOpenJDK/openjdk
+$ brew tap adoptopenjdk/openjdk
 # if you want to list the available versions:
 $ brew search adoptopenjdk
 
-$ brew cask install adoptopenjdk13
+$ brew cask install adoptopenjdk14
 ```
 
 ### Install jenv (https://www.jenv.be/)
@@ -48,7 +49,7 @@ $ jenv enable-plugin graddle
 #### add the new jdk to jenv environment
 
 ```bash
-$ jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home/
+$ jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home/
 
 # another one 
 $ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/
@@ -58,16 +59,16 @@ $ jenv add /Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/
 #### change your jdk with:
 
 ```bash
-$ jenv global 11.0
+$ jenv global 14
 
 # or
 $ jenv global 1.8
-$ jenv global 11.0
+$ jenv global 11
 
 # you can use 'local' instead of 'global'. this will create a .java-version file
 # and the jvm version you chose will be set up for the current directory only.
 # you can remove it to go back to global
-$ jenv local 11.0
+$ jenv local 1.8
 ```
 #### check the results:
 ```bash

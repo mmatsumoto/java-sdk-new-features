@@ -1,7 +1,6 @@
-package org.example.java13;
+package org.example.java14;
 
 public class _01Switch {
-
 
     private static String getAnimal1(String sound) {
         return switch(sound) {

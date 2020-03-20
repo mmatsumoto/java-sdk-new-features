@@ -15,11 +15,11 @@
         <module>java9</module>
         <module>java10</module>
         <module>java11</module>
-        <module>java13</module>
+        <module>java14</module>
     </modules>
 
     <properties>
-        <java.version>13</java.version>
+        <java.version>14</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
