@@ -27,6 +27,19 @@ public class _01Switch {
         };
     }
 
+    private static int getAnimal(Sound sound) {
+        return switch (sound) {
+            case MEAW -> 0;
+            case HUFF -> 1;
+            default -> {
+                // block of code
+                int result = sound.ordinal() * 2;
+                System.out.println("I did something before yield");
+                yield  result;
+            }
+        };
+    }
+
     public static void main(String[] args) {
         System.out.println(getAnimal1("meaw"));
         System.out.println(getAnimal1("huff"));

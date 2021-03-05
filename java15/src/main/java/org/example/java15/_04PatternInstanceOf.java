@@ -1,4 +1,4 @@
-package org.example.java14;
+package org.example.java15;
 
 public class _04PatternInstanceOf {
     public static void main(String[] args) {

@@ -8,7 +8,8 @@ This is just a playground project to study the new JDK's features.
 * Java 12: [No new language features](http://openjdk.java.net/projects/jdk/12/)  
     * [Microbenchmark Suite](http://openjdk.java.net/jeps/230)
 * Java 13: [No new language features](https://openjdk.java.net/projects/jdk/13/)  
-* Java 14: WIP [(Preview examples) Records, patterns, text block](java14/README.md)
+* Java 14: [examples](java14/README.md) [notes](https://openjdk.java.net/projects/jdk/14/)
+* Java 15: WIP [(Preview examples) Sealed classes, record, patterns, text block](java15/README.md) [notes](https://openjdk.java.net/projects/jdk/15/)
 
 ## Prerequisites:
 
