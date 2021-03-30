@@ -1,9 +1,8 @@
 package org.example.java9;
 
-import lombok.Value;
-
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -59,9 +58,42 @@ class _05Collectors {
     }
 }
 
-@Value
 class ColorFruit {
     public String color;
     public List<String> fruits;
+
+    public ColorFruit(String color, List<String> fruits) {
+        this.color = color;
+        this.fruits = fruits;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public List<String> getFruits() {
+        return fruits;
+    }
+
+    public void setFruits(List<String> fruits) {
+        this.fruits = fruits;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ColorFruit that = (ColorFruit) o;
+        return Objects.equals(color, that.color) && Objects.equals(fruits, that.fruits);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, fruits);
+    }
 }
 
