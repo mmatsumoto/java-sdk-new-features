@@ -1,4 +1,4 @@
-package org.example.java15;
+package org.example.java16;
 
 import java.util.NoSuchElementException;
 import java.util.function.Function;
@@ -17,9 +17,9 @@ public class _05Sealed {
         Function<String, String> success = String::toUpperCase;
 
         System.out.println("fold result: " + e1.fold(fallback, success));
-        if (e1 instanceof Left<String, String> left) {
-            System.out.println(left.<String>recovery(v -> "after recovery " + v));
-        }
+//        if (e1 instanceof Left<String, String> left) {
+//            System.out.println(left.<String>recovery(v -> "after recovery " + v));
+//        }
 
 
 
@@ -29,9 +29,9 @@ public class _05Sealed {
         System.out.println(e2.isRight());
         System.out.println("My right value: " + e2.get());
         System.out.println("fold result: " + e2.fold(fallback, success));
-        if (e2 instanceof Right<String, String> right) {
-            System.out.println(right.<String>map(v -> "after map " + v));
-        }
+//        if (e2 instanceof Right<String, String> right) {
+//            System.out.println(right.<String>map(v -> "after map " + v));
+//        }
 
 
         // in the future? pattern matching
